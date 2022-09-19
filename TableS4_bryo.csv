@@ -1,0 +1,49 @@
+"","ï..Code","X","Espece","Groupe","Famille","Section","Statut_Qc","Port","Humidity","Substrate","Life_strategy","Wetland_status","Bryophyte.group","Life_form","Frequence_fen","Frequence_bog","Frequence_bog"
+"1","AUL.pal",1,"Aulacomnium palustre","Mousse","Aulacomniaceae","Mousse",1,"Moss","yes","tep","Perennial","FACW","Acrocarpous","Turf",56,12,12
+"2","CAL.cor",2,"Calliergon cordifolium","Mousse","Calliergonaceae","Mousse",1,"Moss","yes","t","Perennial","OBL","Pleurocarpous","Turf",8,7,7
+"3","CAL.str",46,"Straminergon stramineum","Mousse","Calliergonaceae","Mousse",1,"Moss","yes","t","Perennial","FACW","Pleurocarpous","Turf",57,11,11
+"4","CAM.ste",3,"Campylium stellatum","Mousse","Amblystegiaceae","Mousse",1,"Moss","yes","b","Perennial","FACW","Pleurocarpous","Weft",41,0,NA
+"5","DIC.bon",4,"Dicranum bonjeanii","Mousse","Dicranaceae","Mousse",1,"Moss","yes","b","Perennial","FACW","Acrocarpous","Tuft",23,4,4
+"6","DIC.fus",5,"Dicranum fuscescens","Mousse","Dicranaceae","Mousse",1,"Moss","no","g","Perennial","FACU","Acrocarpous","Tuft",2,12,12
+"7","DIC.pol",6,"Dicranum polysetum","Mousse","Dicranaceae","Mousse",1,"Moss","no","ep","Perennial","FACU","Acrocarpous","Tuft",8,19,19
+"8","DIC.sco",7,"Dicranum scoparium","Mousse","Dicranaceae","Mousse",1,"Moss","no","g","Perennial","FACU","Acrocarpous","Tuft",13,2,2
+"9","DIC.und",8,"Dicranum undulatum","Mousse","Dicranaceae","Mousse",1,"Moss","yes","b","Shuttle","FACW","Acrocarpous","Tuft",4,37,37
+"10","DRE.exa",17,"Sarmentypnum exannulatum","Mousse","Calliergonaceae","Mousse",1,"Moss","yes","a","Perennial","FACW","Pleurocarpous","Turf",19,7,7
+"11","DRE.flu",48,"Warnstorfia fluitans","Mousse","Calliergonaceae","Mousse",1,"Moss","yes","b","Perennial","OBL","Pleurocarpous",NA,27,9,9
+"12","HYL.spl",9,"Hylocomium splendens","Mousse","Hylocomiaceae","Mousse",1,"Moss","no","tep","Perennial","FAC","Pleurocarpous","Weft",52,6,6
+"13","LIM.rev",18,"Scorpidium revolvens","Mousse","Calliergonaceae","Mousse",1,"Moss","yes","b","Perennial","OBL","Pleurocarpous","Turf",32,1,1
+"14","LOE.bad",10,"Loeskypnum badium","Mousse","Calliergonaceae","Mousse",1,"Moss","yes","b","Perennial","FAC","Pleurocarpous","Turf",17,0,NA
+"15","PLE.sch",11,"Pleurozium schreberi","Mousse","Hylocomiaceae","Mousse",1,"Moss","no","g","Perennial","FAC","Pleurocarpous","Weft",12,86,86
+"16","POH.nut",12,"Pohlia nutans","Mousse","Mielichhoferiaceae","Mousse",1,"Moss","no","g",NA,"FAC","Acrocarpous","Tuft",10,5,5
+"17","POL.com",13,"Polytrichum commune","Mousse","Polytrichaceae","Mousse",1,"Moss","no","t","Perennial","FAC","Acrocarpous","Turf",4,14,14
+"18","POL.jun",14,"Polytrichum juniperinum","Mousse","Polytrichaceae","Mousse",1,"Moss","no","t","Perennial","FAC","Acrocarpous","Turf",5,20,20
+"19","PTL.cri",15,"Ptilium crista-castrensis","Mousse","Hypnaceae","Mousse",1,"Moss","no","tep","Perennial","FACU","Pleurocarpous","Weft",81,17,17
+"20","SAN.unc",16,"Sanionia uncinata ","Mousse","Amblystegiaceae","Mousse",1,"Moss","no","rep","Perennial","FACU","Pleurocarpous","Turf",4,1,1
+"21","SCO.sco",19,"Scorpidium scorpioides","Mousse","Calliergonaceae","Mousse",1,"Moss","yes","b","Perennial","OBL","Pleurocarpous","Weft",18,0,NA
+"22","SPH.ann",20,"Sphagnum annulatum","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",5,1,1
+"23","SPH.bal",21,"Sphagnum balticum ","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",23,5,5
+"24","SPH.cap",22,"Sphagnum capillifolium","Sphaigne","Sphagnaceae","Acutifolia",1,"Moss","yes","b","Dominant","OBL","Sphagnum","Turf",11,86,86
+"25","SPH.cen",23,"Sphagnum centrale","Sphaigne","Sphagnaceae","Sphagnum",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",8,0,NA
+"26","SPH.com",24,"Sphagnum compactum","Sphaigne","Sphagnaceae","Rigida",1,"Moss","yes","tr","Shuttle","OBL","Sphagnum","Turf",60,9,9
+"27","SPH.con",25,"Sphagnum contortum ","Sphaigne","Sphagnaceae","Subsecunda",1,"Moss","yes","t","Shuttle","OBL","Sphagnum","Turf",11,0,NA
+"28","SPH.cus",26,"Sphagnum cuspidatum","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",46,6,6
+"29","SPH.fal",27,"Sphagnum fallax","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","b","Dominant","OBL","Sphagnum","Turf",4,92,92
+"30","SPH.fus",28,"Sphagnum fuscum","Sphaigne","Sphagnaceae","Acutifolia",1,"Moss","yes","b","Dominant","OBL","Sphagnum","Tuft",3,118,118
+"31","SPH.gir",29,"Sphagnum girgensohnii","Sphaigne","Sphagnaceae","Acutifolia",1,"Moss","yes","tr","Dominant","OBL","Sphagnum","Turf",93,9,9
+"32","SPH.lin",30,"Sphagnum lindbergii","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","a","Shuttle","OBL","Sphagnum","Turf",102,28,28
+"33","SPH.mag",31,"Sphagnum magellanicum","Sphaigne","Sphagnaceae","Sphagnum",1,"Moss","yes","g","Dominant","OBL","Sphagnum","Turf",15,73,73
+"34","SPH.maj",32,"Sphagnum majus","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",31,50,50
+"35","SPH.pap",33,"Sphagnum papillosum","Sphaigne","Sphagnaceae","Sphagnum",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",70,19,19
+"36","SPH.pla",34,"Sphagnum platyphyllum","Sphaigne","Sphagnaceae","Subsecunda",1,"Moss","yes","a","Shuttle","OBL","Sphagnum","Turf",32,0,NA
+"37","SPH.pul",35,"Sphagnum pulchrum","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",52,13,13
+"38","SPH.rip",36,"Sphagnum riparium","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","a","Shuttle","OBL","Sphagnum","Turf",7,4,4
+"39","SPH.rub",37,"Sphagnum rubellum","Sphaigne","Sphagnaceae","Acutifolia",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",75,30,30
+"40","SPH.rus",38,"Sphagnum russowii","Sphaigne","Sphagnaceae","Acutifolia",1,"Moss","no","d","Dominant","OBL","Sphagnum","Turf",14,54,54
+"41","SPH.squ",39,"Sphagnum squarrosum ","Sphaigne","Sphagnaceae","Squarrosa",1,"Moss","yes","t","Shuttle","OBL","Sphagnum","Turf",40,6,6
+"42","SPH.sub",41,"Sphagnum subsecundum","Sphaigne","Sphagnaceae","Subsecunda",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",11,1,1
+"43","SPH.subf",40,"Sphagnum subfulvum","Sphaigne","Sphagnaceae","Acutifolia",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",72,1,1
+"44","SPH.ten",42,"Sphagnum tenellum ","Sphaigne","Sphagnaceae","Cuspidata",1,"Moss","yes","r","Shuttle","OBL","Sphagnum","Turf",13,11,11
+"45","SPH.ter",43,"Sphagnum teres","Sphaigne","Sphagnaceae","Squarrosa",1,"Moss","yes","b","Shuttle","OBL","Sphagnum","Turf",23,2,2
+"46","SPH.war",44,"Sphagnum warnstorfii","Sphaigne","Sphagnaceae","Acutifolia",1,"Moss","yes","b","Shuttle","OBL","Acrocarpous","Turf",4,16,16
+"47","SPH.wul",45,"Sphagnum wulfianum ","Sphaigne","Sphagnaceae","Acutifolia",1,"Moss","no","t","Shuttle","OBL","Sphagnum","Turf",10,4,4
+"48","TOM.nit",47,"Tomentypnum nitens","Mousse","Amblystegiaceae","Mousse",1,"Moss","yes","b","Perennial","OBL","Pleurocarpous","Turf",4,6,6

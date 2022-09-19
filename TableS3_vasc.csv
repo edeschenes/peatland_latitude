@@ -1,0 +1,129 @@
+Espece,Port,Wetland Indicator Status,Maximum height,Height class,Seed weight,Seed class,SLA,SLA class,Frequency fen,Frequency bog
+Abies balsamea,Tree,FAC,2500,Height 3,7.58,Seed 3,15.75,SLA 2,17,20
+Agrostis mertensii,Herbaceous,FACU,40,Height 1,0.14,Seed 1,22.52,SLA 2,14,1
+Alnus incana subsp. rugosa,Shrub,FACW,900,Height 3,0.42,Seed 1,15.00,SLA 1,116,7
+Alnus alnobetula subsp. crispa,Shrub,FAC,300,Height 3,0.35,Seed 1,15.54,SLA 2,4,4
+Amelanchier bartramiana,Shrub,FAC,250,Height 3,NA,NA,16.87,SLA 2,14,7
+Andromeda polifolia var. latifolia,Shrub,OBL,70,Height 2,0.20,Seed 1,8.58,SLA 1,51,86
+Aronia melanocarpa,Shrub,FAC,200,Height 3,1.37,Seed 3,9.73,SLA 1,13,0
+Betula glandulosa,Shrub,FACW,300,Height 3,0.15,Seed 1,15.71,SLA 2,45,18
+Betula michauxii,Shrub,OBL,50,Height 2,NA,NA,NA,NA,20,6
+Betula pumila var. pumila,Shrub,OBL,400,Height 3,0.60,Seed 2,9.30,SLA 1,148,7
+Calamagrostis canadensis,Herbaceous,FACW,110,Height 3,0.12,Seed 1,17.37,SLA 2,16,8
+Calla palustris,Herbaceous,OBL,30,Height 1,2.73,Seed 3,31.20,SLA 3,7,1
+Caltha palustris,Herbaceous,OBL,60,Height 2,1.02,Seed 3,33.76,SLA 3,30,2
+Carex aquatilis,Herbaceous,OBL,120,Height 3,0.45,Seed 1,15.03,SLA 2,102,3
+Carex bigelowii,Herbaceous,FACW,50,Height 2,0.54,Seed 2,13.97,SLA 1,21,2
+Carex brunnescens,Herbaceous,FACW,90,Height 2,0.47,Seed 1,NA,NA,56,5
+Carex canescens,Herbaceous,OBL,90,Height 2,0.33,Seed 1,18.80,SLA 2,30,2
+Carex chordorrhiza,Herbaceous,OBL,35,Height 1,1.49,Seed 3,21.84,SLA 2,3,1
+Carex diandra,Herbaceous,OBL,90,Height 2,0.42,Seed 1,8.80,SLA 1,4,0
+Carex echinata subsp. echinata,Herbaceous,OBL,90,Height 2,0.84,Seed 2,13.50,SLA 1,2,4
+Carex exilis,Herbaceous,OBL,80,Height 2,NA,NA,NA,NA,10,2
+Carex lasiocarpa subsp. americana,Herbaceous,OBL,120,Height 3,0.98,Seed 2,11.44,SLA 1,121,0
+Carex leptalea,Herbaceous,OBL,70,Height 2,0.37,Seed 1,NA,NA,6,0
+Carex limosa,Herbaceous,OBL,60,Height 2,1.58,Seed 3,23.67,SLA 2,2,66
+Carex livida,Herbaceous,OBL,55,Height 2,0.55,Seed 2,NA,NA,4,0
+Carex magellanica subsp. irrigua,Herbaceous,OBL,80,Height 2,1.24,Seed 3,25.78,SLA 3,60,23
+Carex michauxiana,Herbaceous,OBL,70,Height 2,1.20,Seed 3,NA,NA,81,0
+Carex oligosperma,Herbaceous,OBL,90,Height 2,4.25,Seed 3,19.00,SLA 2,9,73
+Carex pauciflora,Herbaceous,OBL,40,Height 1,0.72,Seed 2,19.45,SLA 2,120,87
+Carex rostrata,Herbaceous,OBL,90,Height 2,1.18,Seed 3,14.28,SLA 1,3,3
+Carex,Herbaceous,FACW,NA,NA,NA,NA,17.44,SLA 2,3,2
+Carex tenuiflora,Herbaceous,OBL,50,Height 2,NA,NA,NA,NA,147,1
+Carex trisperma,Herbaceous,OBL,60,Height 2,0.97,Seed 2,NA,NA,5,39
+Chamaedaphne calyculata,Shrub,OBL,100,Height 3,0.07,Seed 1,13.16,SLA 1,48,147
+Clintonia borealis,Herbaceous,FAC,50,Height 2,4.70,Seed 3,34.33,SLA 3,2,3
+Comarum palustre,Herbaceous,OBL,60,Height 2,0.27,Seed 1,15.62,SLA 2,183,6
+Coptis trifolia,Herbaceous,FACW,20,Height 1,0.18,Seed 1,29.42,SLA 3,4,13
+Cornus canadensis,Herbaceous,FAC,15,Height 1,10.67,Seed 3,16.01,SLA 2,38,9
+Dasiphora fruticosa,Shrub,FACW,100,Height 3,0.22,Seed 1,10.21,SLA 1,26,1
+Deschampsia cespitosa,Herbaceous,FACW,120,Height 3,0.26,Seed 1,13.89,SLA 1,56,0
+Avenella flexuosa,Herbaceous,FACU,80,Height 2,NA,NA,17.51,SLA 2,9,2
+Drosera anglica,Herbaceous,OBL,30,Height 1,0.03,Seed 1,34.49,SLA 3,19,14
+Drosera intermedia,Herbaceous,OBL,20,Height 1,0.03,Seed 1,28.31,SLA 3,31,3
+Drosera rotundifolia,Herbaceous,OBL,15,Height 1,0.02,Seed 1,44.01,SLA 3,8,81
+Empetrum nigrum,Shrub,FAC,15,Height 1,5.21,Seed 3,9.16,SLA 1,10,37
+Epilobium anagallidifolium,Herbaceous,FAC,10,Height 1,0.07,Seed 1,23.54,SLA 2,17,2
+Epilobium palustre,Herbaceous,OBL,60,Height 2,0.08,Seed 1,46.17,SLA 3,46,2
+Equisetum arvense,Herbaceous,FAC,40,Height 1,0.01,Seed 1,12.78,SLA 1,6,1
+Equisetum fluviatile,Herbaceous,OBL,115,Height 3,0.01,Seed 1,9.35,SLA 1,125,4
+Equisetum palustre,Herbaceous,FACW,40,Height 1,0.01,Seed 1,8.00,SLA 1,40,1
+Equisetum sylvaticum,Herbaceous,FACW,50,Height 2,0.01,Seed 1,23.90,SLA 2,6,21
+Eriophorum angustifolium subsp. angustifolium,Herbaceous,OBL,100,Height 3,0.39,Seed 1,10.32,SLA 1,22,1
+Eriophorum gracile,Herbaceous,OBL,60,Height 2,0.52,Seed 2,NA,NA,5,1
+Eriophorum russeolum,Herbaceous,OBL,80,Height 2,NA,NA,NA,NA,62,6
+Eriophorum vaginatum subsp. spissum,Herbaceous,OBL,60,Height 2,0.75,Seed 2,10.97,SLA 1,47,86
+Eriophorum virginicum,Herbaceous,OBL,120,Height 3,1.06,Seed 3,NA,NA,5,15
+Eriophorum viridicarinatum,Herbaceous,OBL,90,Height 2,0.61,Seed 2,NA,NA,5,1
+Eurybia radula,Herbaceous,OBL,100,Height 3,NA,NA,NA,NA,43,1
+Fragaria vesca subsp. americana,Herbaceous,FACU,30,Height 1,0.30,Seed 1,33.98,SLA 3,3,11
+Galium labradoricum,Herbaceous,OBL,30,Height 1,1.00,Seed 3,NA,NA,4,3
+Gaultheria hispidula,Herbaceous,FACW,15,Height 1,0.15,Seed 1,18.13,SLA 2,55,54
+Gentiana linearis,Herbaceous,OBL,80,Height 2,NA,NA,NA,NA,32,0
+Iris versicolor,Herbaceous,OBL,90,Height 2,15.02,Seed 3,21.66,SLA 2,4,1
+Juniperus communis,Shrub,FACU,150,Height 3,14.29,Seed 3,6.80,SLA 1,64,3
+Juniperus horizontalis,Shrub,FACU,50,Height 2,13.00,Seed 3,4.04,SLA 1,54,1
+Juncus stygius subsp. americanus,Herbaceous,OBL,40,Height 1,NA,NA,NA,NA,4,0
+Kalmia angustifolia,Shrub,FAC,150,Height 3,0.01,Seed 1,8.35,SLA 1,6,71
+Kalmia polifolia,Shrub,OBL,100,Height 3,0.01,Seed 1,48.01,SLA 3,34,136
+Larix laricina,Tree,FACW,2500,Height 3,2.00,Seed 3,16.88,SLA 2,11,98
+Rhododendron groenlandicum,Shrub,OBL,150,Height 3,0.03,Seed 1,14.34,SLA 1,7,124
+Linnaea borealis subsp. longiflora,Herbaceous,FAC,60,Height 2,1.25,Seed 3,20.59,SLA 2,10,6
+Neottia cordata,Herbaceous,FACW,35,Height 1,NA,NA,31.70,SLA 3,5,4
+Lonicera villosa,Shrub,FACW,70,Height 2,NA,NA,NA,NA,2,6
+Lycopodium annotinum,Herbaceous,FAC,100,Height 3,NA,NA,17.41,SLA 2,20,18
+Maianthemum canadense,Herbaceous,FACU,22,Height 1,9.00,Seed 3,30.91,SLA 3,62,3
+Maianthemum trifolium,Herbaceous,FACW,40,Height 1,12.13,Seed 3,NA,NA,4,66
+Malaxis unifolia,Herbaceous,FAC,50,Height 2,NA,NA,NA,NA,2,0
+Menyanthes trifoliata,Herbaceous,OBL,30,Height 1,2.97,Seed 3,22.70,SLA 2,59,4
+Muhlenbergia glomerata,Herbaceous,FACW,100,Height 3,0.20,Seed 1,NA,NA,13,0
+Muhlenbergia uniflora,Herbaceous,OBL,150,Height 3,0.60,Seed 2,NA,NA,51,0
+Myrica gale,Shrub,OBL,150,Height 3,1.17,Seed 3,10.47,SLA 1,14,7
+Nuphar variegata,Herbaceous,OBL,120,Height 3,13.31,Seed 3,NA,NA,110,6
+Oclemena nemoralis,Herbaceous,OBL,60,Height 2,NA,NA,NA,NA,14,1
+Orthilia secunda,Herbaceous,FAC,35,Height 1,0.00,Seed 1,16.63,SLA 2,25,2
+Packera paupercula,Herbaceous,FAC,45,Height 1,0.26,Seed 1,29.02,SLA 3,21,0
+Aronia xprunifolia ,Shrub,FACW,365,Height 3,NA,Seed 3,NA,NA,9,1
+Picea mariana,Tree,FACW,3000,Height 3,1.17,Seed 3,4.85,SLA 1,14,149
+Pinus banksiana,Tree,FACU,2000,Height 3,3.54,Seed 3,8.24,SLA 1,29,6
+Piptatheropsis canadensis,Herbaceous,UPL,80,Height 2,NA,NA,NA,NA,19,1
+Platanthera dilatata var. dilatata ,Herbaceous,FACW,130,Height 3,NA,NA,NA,NA,4,0
+Coptidium lapponicum,Herbaceous,OBL,10,Height 1,NA,NA,NA,NA,16,3
+Endotropis alnifolia,Shrub,OBL,100,Height 3,NA,NA,NA,NA,46,0
+Rhynchospora alba,Herbaceous,OBL,75,Height 2,0.45,Seed 1,16.98,SLA 2,10,23
+Ribes hirtellum,Shrub,FAC,150,Height 3,1.50,Seed 3,NA,NA,26,1
+Ribes uva-crispa,Shrub,UPL,150,Height 3,3.33,Seed 3,19.42,SLA 2,34,2
+Rubus arcticus subsp. acaulis,Herbaceous,FACW,25,Height 1,1.68,Seed 3,30.97,SLA 3,39,7
+Rubus chamaemorus,Herbaceous,FACW,30,Height 1,7.69,Seed 3,14.09,SLA 1,5,135
+Rubus pubescens,Herbaceous,FACW,50,Height 2,2.50,Seed 3,36.35,SLA 3,10,3
+Salix argyrocarpa,Shrub,FACU,100,Height 3,NA,Seed 1,NA,NA,10,4
+Salix bebbiana,Shrub,FACW,600,Height 3,0.18,Seed 1,13.58,SLA 1,14,5
+Salix pedicellaris,Shrub,OBL,150,Height 3,NA,Seed 1,15.23,SLA 2,54,6
+Salix planifolia,Shrub,OBL,900,Height 3,NA,Seed 1,12.30,SLA 1,9,3
+Salix pyrifolia,Shrub,FACW,500,Height 3,NA,Seed 1,13.93,SLA 1,6,4
+Salix,Shrub,FACW,NA,Height 3,NA,Seed 1,12.29,SLA 1,32,1
+Sanguisorba canadensis,Herbaceous,FACW,200,Height 3,11.51,Seed 3,NA,NA,191,1
+Sarracenia purpurea,Herbaceous,OBL,80,Height 2,1.75,Seed 3,14.72,SLA 1,47,57
+Scheuchzeria palustris,Herbaceous,OBL,40,Height 1,7.20,Seed 3,10.05,SLA 1,24,51
+Selaginella selaginoides,Herbaceous,FACW,8,Height 1,NA,NA,23.31,SLA 2,21,1
+Solidago macrophylla,Herbaceous,FACU,105,Height 3,0.83,Seed 2,29.29,SLA 3,4,5
+Solidago uliginosa,Herbaceous,OBL,150,Height 3,0.26,Seed 1,NA,NA,37,1
+Spiraea alba var. alba,Shrub,FACW,200,Height 3,0.88,Seed 2,12.32,SLA 1,5,1
+Trichophorum alpinum,Herbaceous,OBL,40,Height 1,0.20,Seed 1,9.43,SLA 1,26,2
+Lysimachia borealis,Herbaceous,FAC,20,Height 1,0.00,Seed 1,39.27,SLA 3,12,6
+Trichophorum cespitosum,Herbaceous,OBL,45,Height 1,0.36,Seed 1,6.41,SLA 1,32,55
+Triantha glutinosa,Herbaceous,FACW,50,Height 2,0.07,Seed 1,NA,NA,12,0
+Triglochin maritima,Herbaceous,OBL,75,Height 2,0.59,Seed 2,10.89,SLA 1,1,0
+Utricularia cornuta,Herbaceous,OBL,30,Height 1,0.43,Seed 1,NA,NA,165,6
+Utricularia intermedia,Herbaceous,OBL,20,Height 1,NA,Seed 1,NA,NA,156,0
+Vaccinium angustifolium,Shrub,FAC,60,Height 2,0.23,Seed 1,26.86,SLA 3,104,47
+Vaccinium caespitosum,Shrub,FAC,25,Height 1,0.09,Seed 1,16.00,SLA 2,11,3
+Vaccinium myrtilloides,Shrub,FACW,60,Height 2,0.20,Seed 1,13.72,SLA 1,6,11
+Vaccinium oxycoccos,Shrub,OBL,15,Height 1,3.75,Seed 3,12.53,SLA 1,8,141
+Vaccinium uliginosum,Shrub,FAC,60,Height 2,10.83,Seed 3,13.75,SLA 1,1,50
+Vaccinium vitis-idaea,Shrub,FAC,20,Height 1,9.94,Seed 3,8.74,SLA 1,4,17
+Viburnum edule,Shrub,FACW,200,Height 3,26.34,Seed 3,31.35,SLA 3,30,5
+Viola blanda,Herbaceous,FACW,15,Height 1,0.96,Seed 2,NA,NA,3,3
+Viola labradorica,Herbaceous,FAC,20,Height 1,NA,NA,NA,NA,80,0
+Viola macloskeyi,Herbaceous,OBL,6,Height 1,0.47,Seed 1,45.56,SLA 3,55,6
