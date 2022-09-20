@@ -39,5 +39,3 @@ source("scripts/FigureS1_S2_S3.R")
 All data used for the analyses can be found in the data folder.
 
 Scripts Figure1_Alpha.R, Figure2_Beta.R, Figures3_4_Composition.R and FigureS1_S2_S3.R performed all the analyses and produced the figures.
-
-The figures and tables produced are saved in the results folder.
