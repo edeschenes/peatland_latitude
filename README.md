@@ -1,2 +1,2 @@
 # peatland_latitude
-Data and scripts for the article Bryophytes and vascular plants show diverging taxonomic and functional biodiversity patterns along latitudinal gradients  in bogs and fens by Deschenes et al. submitted to Biogeography in 2022. 
+This repository includes the data and R scripts to reproduce analyses and figures found in the article Bryophytes and vascular plants show diverging taxonomic and functional biodiversity patterns along a latitudinal gradient in bogs and fens by Élise Deschênes, Monique Poulin, Marie-Hélène Brice, Pierre Legendre & Stéphanie Pellerin for publication in Journal of Biogeography. 
