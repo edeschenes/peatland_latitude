@@ -133,7 +133,7 @@ p3 <-ggplot(data= env, aes(Habitat, bioclim_1))+
                 geom='errorbar', linetype=1, width=0.5)+  #whiskers
   geom_boxplot( aes(Habitat, bioclim_1),outlier.shape=1) +    
   stat_summary(fun=mean, geom="point", size=3) +
-  labs(y="Annual temperature (°C)", x = "Habitat")+
+  labs(y="Annual temperature (Â°C)", x = "Habitat")+
   theme(axis.title = element_text(size = 12),
         axis.text=element_text(size=12), 
         legend.text=element_text(size=12))
