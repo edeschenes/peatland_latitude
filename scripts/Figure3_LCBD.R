@@ -353,7 +353,7 @@ mod_bry_lcbd_f <- ggplot(df, aes(x, predicted)) +
 #######################################################
 ####Download SVG file for modification in Inkscape ####
 #######################################################
-svglite("figure2_beta_aleatoire.svg")
+svglite("figure3_LCBD.svg")
 gridExtra::grid.arrange(mod_vas_lcbd_t, mod_bry_lcbd_t, mod_vas_lcbd_f,mod_bry_lcbd_f, ncol=2)
 dev.off()
 
