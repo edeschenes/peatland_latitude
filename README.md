@@ -37,9 +37,9 @@ To reproduce the entire analysis including data cleaning, analyses and figures, 
 ```
 source("scripts/Figure2_Alpha.R")
 source("scripts/Figure3_Beta.R")
-source("scripts/Figures4_5_Composition.R")
+source("scripts/Figures_4_5_Composition.R")
 source("scripts/Figures_supp.R")
 ```
 All data used for the analyses can be found in the data folder.
 
-Scripts Figure2_Alpha.R, Figure3_Beta.R, Figures4_5_Composition.R and Figures_supp.R performed all the analyses and produced the figures.
+Scripts Figure2_Alpha.R, Figure3_Beta.R, Figures_4_5_Composition.R and Figures_supp.R performed all the analyses and produced the figures.
