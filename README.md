@@ -6,6 +6,7 @@ The analyses were carried out with R version 4.2.2  (a free software environment
 **The following packages must be installed to run the scripts:**
 
 - ggeffects
+- effects
 - nlme
 - emmeans
 - ggplot2
@@ -19,6 +20,9 @@ The analyses were carried out with R version 4.2.2  (a free software environment
 - eulerr
 - ggcorrplot
 - GGally
+- Reshape2
+- ggpmisc
+
 
 **Below are the R commands to install them all:**
 
