@@ -28,18 +28,18 @@ The analyses were carried out with R version 4.2.2  (a free software environment
 
 ```
 install.packages(
-  c("ggeffects", "nlme", "emmeans", "ggplot2", "dplyr", "car", "gridExtra", "svglite",
-  "FD", "adespatial", "vegan", "eulerr", "ggcorrplot", "GGally")
+  c("ggeffects","effects", "nlme", "emmeans", "ggplot2", "dplyr", "car", "gridExtra", "svglite",
+  "FD", "adespatial", "vegan", "eulerr", "ggcorrplot", "GGally", "reshape2", "ggpmisc")
 )
 ```
 
 To reproduce the entire analysis including data cleaning, analyses and figures, run:
 ```
-source("scripts/Figure1_Alpha.R")
-source("scripts/Figure2_Beta.R")
-source("scripts/Figures3_4_Composition.R")
-source("scripts/FigureS1_S2_S3.R")
+source("scripts/Figure2_Alpha.R")
+source("scripts/Figure3_Beta.R")
+source("scripts/Figures4_5_Composition.R")
+source("scripts/Figures_supp.R")
 ```
 All data used for the analyses can be found in the data folder.
 
-Scripts Figure1_Alpha.R, Figure2_Beta.R, Figures3_4_Composition.R and FigureS1_S2_S3.R performed all the analyses and produced the figures.
+Scripts Figure2_Alpha.R, Figure3_Beta.R, Figures4_5_Composition.R and Figures_supp.R performed all the analyses and produced the figures.
