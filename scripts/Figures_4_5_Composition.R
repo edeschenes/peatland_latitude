@@ -107,8 +107,6 @@ venn_bryo_tax <- euler(c(A = 0.6,          # Draw pairwise venn diagram
 #Plot the Venn diagram with circle sizes proportional to the proportion of variation explained
 p_venn_bryo_tax <- plot(venn_bryo_tax, quantities = list(type = c("counts"), cex = seq(1, 1, length.out = 4)), labels = list(labels = c("Bioclimatic", 'Space', 'Local'),  cex = seq(1,1, length.out = 4)),adjust_labels =TRUE)
 
-
-
 ###############################################################################
 ####RDA of functional composition as a function of environmental variables ####
 ###############################################################################
@@ -283,10 +281,9 @@ p_venn_bryo_funct <- plot(venn_bryo_funct, quantities = list(type = c("counts"),
 #######################################################
 ####Download SVG file for modification in Inkscape ####
 #######################################################
-svglite("figure3_varpart.svg")
+svglite("figure4_varpart.svg")
 gridExtra::grid.arrange(p_venn_vasc_tax, p_venn_bryo_tax,p_venn_vasc_funct, p_venn_bryo_funct, ncol=2)
 dev.off()
-
 
 ##################################
 #### RDA OF FUNCTIONAL TRAITS ####
@@ -307,8 +304,11 @@ pointvec <- c(19,17)
 #################################################################################
 #### Plot of vascular species functional traits as a function of enviro variables
 #################################################################################
+#Both RDA plots will be combined and cleaned in Inkscape. 
+
 summary(vas.funct.rda)
-svglite("figure4_RDA_vasc.svg")
+
+svglite("figure5_RDA_vasc.svg")
 plot(vas.funct.rda, scaling=2, main="Triplot RDA - vascular traits", type="none", xlab=c("RDA1 (88.45%)"), ylab=c("RDA2 (4.74%)"), xlim=c(-1, 1), ylim=c(-1.4,1.4), cex =1)
 with(env, points(vas.funct.rda, display = "sites", col = colvec[Habitat],
                  scaling = scl, pch = pointvec[Habitat], bg = colvec[Habitat]))
@@ -337,7 +337,8 @@ dev.off()
 #### Plot of bryophyte species functional traits as a function of enviro variables
 #################################################################################
 summary(bry.funct.rda)
-svglite("figure4_RDA_bryo.svg")
+
+svglite("figure5_RDA_bryo.svg")
 plot(bry.funct.rda, scaling=2, main="Triplot RDA - bryo traits", type="none", xlab=c("RDA1 (55.01%)"), ylab=c("RDA2 (29.03%)"), cex = 1,ylim=c(-1.3,1.3))
 with(env, points(bry.funct.rda, display = "sites", col = colvec[Habitat],
                  scaling = 2, pch = pointvec[Habitat], bg = colvec[Habitat]))
