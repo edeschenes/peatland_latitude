@@ -1,7 +1,7 @@
 # Bryophytes and vascular plants biodiversity patterns along a latitudinal gradient in peatlands
 This repository includes the data and R scripts to reproduce analyses and figures found in the article Bryophytes and vascular plants show diverging taxonomic and functional biodiversity patterns along a latitudinal gradient in bogs and fens by Élise Deschênes, Monique Poulin, Marie-Hélène Brice, Pierre Legendre & Stéphanie Pellerin for publication in Journal of Biogeography. 
 
-The analyses were carried out with R version 4.1.0  (a free software environment for statistical computing and graphics) and require the installation of a recent version of it.
+The analyses were carried out with R version 4.2.2  (a free software environment for statistical computing and graphics) and require the installation of a recent version of it.
 
 **The following packages must be installed to run the scripts:**
 
