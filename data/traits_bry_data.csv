@@ -1,0 +1,49 @@
+﻿Espece,Code,Bryophyte.group,Life_form,shoot_length_cm,Shoot_length,Sexual_condition,Seta_length,Peristome_type,spores_um,Spore_size,Tomentum,peristome
+Aulacomnium palustre,AUL.pal,Acrocarpous,Turf,10,Shoot 1,Dioicous,Seta 3,Perfect,14,Spore 1,1,Diplolepidous alternate
+Calliergon cordifolium,CAL.cor,Pleurocarpous,Turf,15,Shoot 2,Monoicous,Seta 3,Perfect,13,Spore 1,0,Diplolepidous perfect
+Campylium stellatum,CAM.ste,Pleurocarpous,Turf,10,Shoot 1,Dioicous,Seta 3,Perfect,15,Spore 1,0,Diplolepidous perfect
+Dicranum bonjeanii,DIC.bon,Acrocarpous,Tuft,13,Shoot 2,Dioicous,Seta 3,Specialized,19,Spore 2,1,Haplolepideous
+Dicranum fuscescens,DIC.fus,Acrocarpous,Tuft,12,Shoot 2,Dioicous,Seta 3,Specialized,21,Spore 2,1,Haplolepideous
+Dicranum polysetum,DIC.pol,Acrocarpous,Tuft,15,Shoot 2,Dioicous,Seta 3,Specialized,21,Spore 2,1,Haplolepideous
+Dicranum scoparium,DIC.sco,Acrocarpous,Tuft,10,Shoot 1,Dioicous,Seta 3,Specialized,17,Spore 1,1,Haplolepideous
+Dicranum undulatum,DIC.und,Acrocarpous,Tuft,8,Shoot 1,Dioicous,Seta 3,Specialized,19,Spore 2,1,Haplolepideous
+Hylocomium splendens,HYL.spl,Pleurocarpous,Weft,15,Shoot 2,Dioicous,Seta 3,Perfect,15.5,Spore 1,0,Diplolepidous
+Loeskypnum badium,LOE.bad,Pleurocarpous,Turf,6,Shoot 1,Dioicous,Seta 3,Perfect,14,Spore 1,0,Diplolepidous perfect
+Pleurozium schreberi,PLE.sch,Pleurocarpous,Weft,12,Shoot 2,Dioicous,Seta 3,Perfect,15,Spore 1,0,Diplolepidous
+Pohlia nutans,POH.nut,Acrocarpous,Tuft,2,Shoot 1,Monoicous,Seta 3,Perfect,19.5,Spore 2,0,Diplolepidous alternate
+Polytrichum commune,POL.com,Acrocarpous,Turf,2,Shoot 1,Dioicous,Seta 4,Specialized,10,Spore 1,1,Nematodontus
+Polytrichum juniperinum,POL.jun,Acrocarpous,Turf,5.5,Shoot 1,Dioicous,Seta 3,Specialized,9.5,Spore 1,1,Nematodontus
+Ptilium crista-castrensis,PTL.cri,Pleurocarpous,Weft,12.5,Shoot 2,Dioicous,Seta 3,Perfect,12,Spore 1,0,Diplolepidous
+Sanionia uncinata ,SAN.unc,Pleurocarpous,Turf,10,Shoot 1,Monoicous,Seta 2,Perfect,14,Spore 1,0,Diplolepidous perfect
+Sarmentypnum exannulatum,DRE.exa,Pleurocarpous,Turf,20,Shoot 3,Dioicous,Seta 3,Perfect,18,Spore 2,0,Diplolepidous perfect
+Scorpidium revolvens,LIM.rev,Pleurocarpous,Turf,10,Shoot 1,Monoicous,Seta 3,Perfect,14,Spore 1,0,Diplolepidous perfect
+Scorpidium scorpioides,SCO.sco,Pleurocarpous,Weft,30,Shoot 3,Dioicous,Seta 4,Perfect,14,Spore 1,0,Diplolepidous perfect
+Sphagnum annulatum,SPH.ann,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,27,Spore 3,0,No peristome
+Sphagnum balticum ,SPH.bal,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,27,Spore 3,0,No peristome
+Sphagnum capillifolium,SPH.cap,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,25.5,Spore 3,0,No peristome
+Sphagnum centrale,SPH.cen,Sphagnum,Turf,25,Shoot 3,Dioicous,Seta 0,No peristome,29,Spore 3,0,No peristome
+Sphagnum compactum,SPH.com,Sphagnum,Turf,10,Shoot 1,Monoicous,Seta 0,No peristome,32.5,Spore 3,0,No peristome
+Sphagnum contortum ,SPH.con,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,25.5,Spore 3,0,No peristome
+Sphagnum cuspidatum,SPH.cus,Sphagnum,Turf,8,Shoot 1,Dioicous,Seta 0,No peristome,34.5,Spore 3,0,No peristome
+Sphagnum fallax,SPH.fal,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,28.5,Spore 3,0,No peristome
+Sphagnum fuscum,SPH.fus,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,25.5,Spore 3,0,No peristome
+Sphagnum girgensohnii,SPH.gir,Sphagnum,Turf,20,Shoot 3 ,Dioicous,Seta 0,No peristome,23.5,Spore 2,0,No peristome
+Sphagnum lindbergii,SPH.lin,Sphagnum,Turf,20,Shoot 3,Monoicous,Seta 0,No peristome,28,Spore 3,0,No peristome
+Sphagnum magellanicum,SPH.mag,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,28,Spore 3,0,No peristome
+Sphagnum majus,SPH.maj,Sphagnum,Turf,25,Shoot 3,Dioicous,Seta 0,No peristome,32.5,Spore 3,0,No peristome
+Sphagnum papillosum,SPH.pap,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,28.5,Spore 3,0,No peristome
+Sphagnum platyphyllum,SPH.pla,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,30,Spore 3,0,No peristome
+Sphagnum pulchrum,SPH.pul,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,26,Spore 3,0,No peristome
+Sphagnum riparium,SPH.rip,Sphagnum,Turf,25,Shoot 3,Dioicous,Seta 0,No peristome,26,Spore 3,0,No peristome
+Sphagnum rubellum,SPH.rub,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,25.5,Spore 3,0,No peristome
+Sphagnum russowii,SPH.rus,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,25.5,Spore 3,0,No peristome
+Sphagnum squarrosum ,SPH.squ,Sphagnum,Turf,20,Shoot 3,Monoicous,Seta 0,No peristome,28.5,Spore 3,0,No peristome
+Sphagnum subfulvum,SPH.subf,Sphagnum,Turf,15,Shoot 2,Monoicous,Seta 0,No peristome,27,Spore 3,0,No peristome
+Sphagnum subsecundum,SPH.sub,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,28,Spore 3,0,No peristome
+Sphagnum tenellum ,SPH.ten,Sphagnum,Turf,10,Shoot 1,Dioicous,Seta 0,No peristome,37.5,Spore 3,0,No peristome
+Sphagnum teres,SPH.ter,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,25,Spore 3,0,No peristome
+Sphagnum warnstorfii,SPH.war,Acrocarpous,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,22,Spore 2,0,No peristome
+Sphagnum wulfianum ,SPH.wul,Sphagnum,Turf,10,Shoot 1,Dioicous,Seta 0,No peristome,24,Spore 2,0,No peristome
+Straminergon stramineum,CAL.str,Pleurocarpous,Turf,25,Shoot 3,Dioicous,Seta 3,Perfect,14,Spore 1,0,Diplolepidous perfect
+Tomentypnum nitens,TOM.nit,Pleurocarpous,Turf,10,Shoot 1,Dioicous,Seta 4,Perfect,18,Spore 2,1,Diplolepidous perfect
+Warnstorfia fluitans,DRE.flu,Pleurocarpous,Turf,16,Shoot 2,Monoicous,Seta 4,Perfect,20,Spore 2,0,Diplolepidous perfect
