@@ -16,11 +16,11 @@ set_theme(base = theme_classic())
 
 #Load data
 #Site x environmental variables matrix
-sites <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/sites_data.csv")
+sites <- read.csv("Data_repository/sites_data.csv")
 #Site x species abundance matrix for vascular species
-vascu <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/vascu_data.csv")
+vascu <- read.csv("CData_repository/vascu_data.csv")
 #Site x species abundance matrix for moss species
-bryo <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/bryo_data.csv")
+bryo <- read.csv("Data_repository/bryo_data.csv")
 
 #Assign plotID to row names and remove plotID as a column
 vascu <- data.frame(vascu[,-1], row.names = vascu$X)
