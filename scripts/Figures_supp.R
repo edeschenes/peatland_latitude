@@ -12,11 +12,11 @@ require(ggpmisc)
 
 #Load data
 #Site x environmental variables matrix
-sites <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/sites_data.csv")
+sites <- read.csv("Data_repository/sites_data.csv")
 #Site x species abundance matrix for vascular species
-vascu <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/vascu_data.csv")
+vascu <- read.csv("Data_repository/vascu_data.csv")
 #Site x species abundance matrix for moss species
-bryo <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/bryo_data.csv")
+bryo <- read.csv("Data_repository/bryo_data.csv")
 
 #Assign plotID to row names and remove plotID as a column
 vascu <- data.frame(vascu[,-1], row.names = vascu$X)
@@ -228,7 +228,7 @@ dev.off()
 ####
 
 #Open vascular trait data 
-traits_vasc <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/traits_vasc_data.csv",sep = ";", header= TRUE)
+traits_vasc <- read.csv("Data_repository/traits_vasc_data.csv",sep = ";", header= TRUE)
 
 #Assign columns as factor
 traits_vasc <- as.data.frame(unclass(traits_vasc), stringsAsFactors = TRUE)
@@ -265,7 +265,7 @@ colnames(cwm_vascu) <- c('Herbaceous', 'Shrub', 'Tree','Height 1', 'Height 2', '
 #### Calculate moss species CWM ####
 ####################################
 #Open moss trait data 
-traits_bryo <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/traits_bry_data.csv", sep = ",", header= TRUE)
+traits_bryo <- read.csv("Data_repository/traits_bry_data.csv", sep = ",", header= TRUE)
 
 #Assign columns as factor
 traits_bryo <- as.data.frame(unclass(traits_bryo), stringsAsFactors = TRUE)
@@ -542,7 +542,7 @@ dev.off()
 ###########################################
 
 #Open vascular trait data 
-traits_vasc <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/traits_vasc_data.csv",sep = ";", header= TRUE)
+traits_vasc <- read.csv("Data_repository/traits_vasc_data.csv",sep = ";", header= TRUE)
 
 #Assign columns as factor
 traits_vasc <- as.data.frame(unclass(traits_vasc), stringsAsFactors = TRUE)
@@ -578,7 +578,7 @@ colnames(cwm_vascu) <- c('Herbaceous', 'Shrub', 'Tree','Height_numeric','Seed_nu
 
 #### Calculate moss species CWM ####
 #Open moss trait data 
-traits_bryo <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/traits_bry_data.csv", sep = ",", header= TRUE)
+traits_bryo <- read.csv("Data_repository/traits_bry_data.csv", sep = ",", header= TRUE)
 
 #Assign columns as factor
 traits_bryo <- as.data.frame(unclass(traits_bryo), stringsAsFactors = TRUE)
