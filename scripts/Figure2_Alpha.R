@@ -136,7 +136,7 @@ require(FD)
 #########################################
 
 #Open vascular trait data 
-traits_vasc <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/traits_vasc_data.csv",sep = ";", header= TRUE)
+traits_vasc <- read.csv("Data_repository/traits_vasc_data.csv",sep = ";", header= TRUE)
 
 #Assign columns as factor
 traits_vasc <- as.data.frame(unclass(traits_vasc), stringsAsFactors = TRUE)
@@ -174,7 +174,7 @@ sites$FDis_v <- fd_v$FDis
 #####################################
 
 #Open moss trait data 
-traits_bryo <- read.csv("C:/Users/edeschen/Documents/MAITRISE/Scripts/Data_repository/traits_bry_data.csv", sep = ",", header= TRUE)
+traits_bryo <- read.csv("Data_repository/traits_bry_data.csv", sep = ",", header= TRUE)
 
 #Assign columns as factor
 traits_bryo <- as.data.frame(unclass(traits_bryo), stringsAsFactors = TRUE)
