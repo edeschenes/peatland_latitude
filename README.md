@@ -1,4 +1,4 @@
-https://zenodo.org/badge/DOI/10.5281/zenodo.7094810.svg
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7094810.svg)]
 
 # Bryophytes and vascular plants biodiversity patterns along a latitudinal gradient in peatlands
 This repository includes the data and R scripts to reproduce analyses and figures found in the article Bryophytes and vascular plants show diverging taxonomic and functional biodiversity patterns along a latitudinal gradient in bogs and fens by Élise Deschênes, Monique Poulin, Marie-Hélène Brice, Pierre Legendre & Stéphanie Pellerin for publication in Journal of Biogeography. 
