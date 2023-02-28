@@ -49,7 +49,7 @@ sites$LCBD.bry.t <- bry.beta$LCBD
 sites$LCBD.vas.t <- vas.beta$LCBD
 
 #Select only environmental variables used in the LCBD analyses (Habitat, latitude, longitude, mean annual temperature, mean annual precipitations, peat thickness, surface water, vascular richness, bryophyte richness)
-env <- dplyr::select(sites, SITES, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, LCBD.vas.t, LCBD.bry.t)
+env <- dplyr::select(sites, SITES, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, Substratum, LCBD.vas.t, LCBD.bry.t)
 
 #Create a new data frame for standardized environmental variables. Standardize environmental variables (scale and center). The unstandardized data will be used to obtain predicted values from the models to be used in the plots (Figure 2).
 env.scale <- env
@@ -60,7 +60,7 @@ env.scale[,c(3:8)] <- scale(env.scale[,c(3:8)], center = TRUE, scale = TRUE)
 #### Linear mixed models - Vascular taxonomic LCBD as a function of variables ####
 ##################################################################################
 #Log transform so conditions are met
-result <- lme(log(LCBD.vas.t) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
+result <- lme(log(LCBD.vas.t) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
 
 #Coefficients and Pvalues in Table 1 are obtained from the following:
 summary(result)
@@ -75,7 +75,7 @@ qqnorm(result, ~ resid(., type = "p") | Habitat, abline = c(0, 1))
 qqnorm(result, ~ranef(.))
 
 #To calculate the p-value and coefficients of LCBD as a function of latitude for bog/fens separately (used in Figure 2), use the non standardized data. This is also used for plotting of predicted values. 
-result <- lme(log(LCBD.vas.t) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env)
+result <- lme(log(LCBD.vas.t) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env)
 
 #Determine the p-value and coefficient of richness as a function of latitude for bogs and fens separately (values used in Figure 1)
 CL <- emtrends(result, pairwise ~ Habitat, var="Latitude") 
@@ -106,7 +106,7 @@ mod_vas_lcbd_t <- ggplot(df, aes(x, predicted)) +
 #### Linear mixed models - Moss taxonomic LCBD as a function of variables ####
 ##############################################################################
 #Log transform so conditions are met
-result <- lme(log(LCBD.bry.t) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
+result <- lme(log(LCBD.bry.t) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
 #Coefficients and Pvalues in Table 1 are obtained from the following:
 summary(result)
 
@@ -120,7 +120,7 @@ qqnorm(result, ~ resid(., type = "p") | Habitat, abline = c(0, 1))
 qqnorm(result, ~ranef(.))
 
 #To calculate the p-value and coefficients of LCBD as a function of latitude for bog/fens separately (used in Figure 2), use the non standardized data. This is also used for plotting of predicted values. 
-result <- lme(log(LCBD.bry.t) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env)
+result <- lme(log(LCBD.bry.t) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env)
 
 #Determine the p-value and coefficient of richness as a function of latitude for bogs and fens separately (values used in Figure 1)
 CL <- emtrends(result, pairwise ~ Habitat, var="Latitude") 
@@ -254,7 +254,7 @@ sites$LCBD.bry.funct <- bry.beta.f$LCBD
 sites$LCBD.vas.funct <- vas.beta.f$LCBD
 
 #Select only environmental variables used in the LCBD analyses (Habitat, latitude, longitude, mean annual temperature, mean annual precipitations, peat thickness, surface water, vascular richness, bryophyte richness)
-env <- dplyr::select(sites, SITES, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, LCBD.vas.funct, LCBD.bry.funct)
+env <- dplyr::select(sites, SITES, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, Substratum, LCBD.vas.funct, LCBD.bry.funct)
 
 
 #Create a new data frame for standardized environmental variables. Standardize environmental variables (scale and center). The unstandardized data will be used to obtain predicted values from the models to be used in the plots (Figure 2).
@@ -266,7 +266,7 @@ env.scale[,c(3:8)] <- scale(env.scale[,c(3:8)], center = TRUE, scale = TRUE)
 #### Linear mixed models - Vascular taxonomic LCBD as a function of variables ####
 ##################################################################################
 #Log transform so conditions are met
-result <- lme(log(LCBD.vas.funct) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
+result <- lme(log(LCBD.vas.funct) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
 #Coefficients and Pvalues in Table 1 are obtained from the following:
 summary(result)
 
@@ -280,7 +280,7 @@ qqnorm(result, ~ resid(., type = "p") | Habitat, abline = c(0, 1))
 qqnorm(result, ~ranef(.))
 
 #To calculate the p-value and coefficients of LCBD as a function of latitude for bog/fens separately (used in Figure 2), use the non standardized data. This is also used for plotting of predicted values.
-result <- lme(log(LCBD.vas.funct) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env)
+result <- lme(log(LCBD.vas.funct) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env)
 #Determine the p-value and coefficient of richness as a function of latitude for bogs and fens separately (values used in Figure 1)
 CL <- emtrends(result, pairwise ~ Habitat, var="Latitude") 
 test(CL)
@@ -310,7 +310,7 @@ mod_vas_lcbd_f <- ggplot(df, aes(x, predicted)) +
 #### Linear mixed models - Moss functional LCBD as a function of variables ####
 ###############################################################################
 #Log transform so conditions are met
-result <- lme(log(LCBD.bry.funct) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
+result <- lme(log(LCBD.bry.funct) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
 #Coefficients and Pvalues in Table 1 are obtained from the following:
 summary(result)
 
@@ -324,7 +324,7 @@ qqnorm(result, ~ resid(., type = "p") | Habitat, abline = c(0, 1))
 qqnorm(result, ~ranef(.))
 
 #To calculate the p-value and coefficients of LCBD as a function of latitude for bog/fens separately (used in Figure 2), use the non standardized data. This is also used for plotting of predicted values.
-result <- lme(log(LCBD.bry.funct) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env)
+result <- lme(log(LCBD.bry.funct) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env)
 
 #Determine the p-value and coefficient of richness as a function of latitude for bogs and fens separately (values used in Figure 1)
 CL <- emtrends(result, pairwise ~ Habitat, var="Latitude") 
