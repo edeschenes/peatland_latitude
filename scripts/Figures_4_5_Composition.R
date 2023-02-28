@@ -4,6 +4,8 @@ require(eulerr)
 require(vegan) 
 require(FD)
 require(svglite)
+require(ggplot2)
+require(sjPlot)
 
 set_theme(base = theme_classic()) 
 
@@ -21,10 +23,10 @@ bryo <- data.frame(bryo[,-1], row.names = bryo$X)
 sites <- data.frame(sites, row.names = sites$ID_Quadrat)
 
 #Select only environmental variables used in the composition analyses (Habitat, latitude, longitude, mean annual temperature, mean annual precipitations, peat thickness, surface water)
-env <- dplyr::select(sites, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water)
+env <- dplyr::select(sites, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, Substratum)
 
 #Create a new data frame for standardized environmental variables. Standardize environmental variables (scale and center). The unstandardized data will be used to obtain predicted values from the models to be used in the plots (Figure 1). 
-env[,c(2:7)] <- scale(env[,c(2:7)], center = TRUE, scale = TRUE)
+env[,c(2:8)] <- scale(env[,c(2:8)], center = TRUE, scale = TRUE)
 env$Habitat <- factor(env$Habitat)
 
 ##############################################################################
@@ -50,7 +52,7 @@ anova(bry.rda) # is the model significant?
 #Define the groups for environmental variables: bioclimatic, spatial, local
 bioclim <- env[, c(4:5)]
 space <- env[, c(2:3)]
-local <- env[, c(1,6,7)]
+local <- env[, c(1,6,7,8)]
 
 
 ##################################################################
@@ -69,10 +71,10 @@ plot(spe.part.vas, digits = 2, bg = c("red", "blue", 'green'),Xnames = c('Biocli
 
 #Assign to a Euler object the proportion of variation explained by each group of variables and their shared proportions
 venn_vasc_tax <- euler(c(A = 1,          
-                     B = 1.4,
-                     C = 12.4,
+                     B = 1.3,
+                     C = 12.7,
                      "A&B" = 2.1,
-                     'A&C'= 0.5,
+                     'A&C'= 0.6,
                      'B&C' = 0.5,
                      'A&B&C' = 0))
 
@@ -94,10 +96,10 @@ p_venn_vasc_tax <- plot(venn_vasc_tax, quantities = list(type = c("counts"), cex
 plot(spe.part.bry, digits = 2, bg = c("red", "blue", 'green'),Xnames = c('Bioclim', 'Space', 'Local'))
 
 #Assign to a Euler object the proportion of variation explained by each group of variables and their shared proportions
-venn_bryo_tax <- euler(c(A = 0.6,          # Draw pairwise venn diagram
+venn_bryo_tax <- euler(c(A = 0.6,        
                          B = 0.9,
                          C = 6.9,
-                         "A&B" = 1.9,
+                         "A&B" = 0.2,
                          'A&C'= 0.3,
                          'B&C' = 0.3,
                          'A&B&C' = 0.5))
@@ -202,7 +204,7 @@ traits_bryo_hel <- sqrt(cwm_bryo)
 
 #Create a new data frame for standardized environmental variables. Standardize environmental variables (scale and center).
 env.scale <- env
-env.scale[,c(2:7)] <- scale(env.scale[,c(2:7)], center = TRUE, scale = TRUE)
+env.scale[,c(2:8)] <- scale(env.scale[,c(2:8)], center = TRUE, scale = TRUE)
 
 # RDA of hellinger transformed vascular CWM as a function of standardized environmental variables
 (vas.funct.rda <- rda(traits_vasc_hel ~ ., env.scale))
@@ -219,7 +221,7 @@ anova(bry.funct.rda) # is the model significant?
 #Define the groups for environmental variables: bioclimatic, spatial, local
 bioclim <- env[, c(4:5)]
 space <- env[, c(2:3)]
-local <- env[, c(1,6,7)]
+local <- env[, c(1,6,7,8)]
 
 ###################################################################
 #### Variation partitioning of vascular functional composition ####
@@ -236,13 +238,13 @@ local <- env[, c(1,6,7)]
 plot(spe.part.vas, digits = 2, bg = c("red", "blue", 'green','yellow'),Xnames = c('Bioclimatic', 'Space', 'Local'))
 
 #Assign to a Euler object the proportion of variation explained by each group of variables and their shared proportions
-venn_vasc_funct <- euler(c(A = 0.5,          # Draw pairwise venn diagram
-                           B = 1.5,
-                           C = 13.5,
+venn_vasc_funct <- euler(c(A = 0.5,         
+                           B = 1.4,
+                           C = 13.7,
                            "A&B" = 2.8,
                            'A&C'= 0.1,
                            'B&C' = 0.5,
-                           'A&B&C' =0))
+                           'A&B&C' = 0.2))
 
 #Plot the Venn diagram with circle sizes proportional to the proportion of variation explained
 p_venn_vasc_funct<- plot(venn_vasc_funct, quantities = list(type = c("counts"), cex = seq(1, 1, length.out = 4)), labels = list(labels = c("Bioclimatic", 'Space', 'Local'),  cex = seq(1,1, length.out = 4)),adjust_labels =TRUE)
@@ -262,11 +264,11 @@ p_venn_vasc_funct<- plot(venn_vasc_funct, quantities = list(type = c("counts"), 
 plot(spe.part.bry, digits = 2, bg = c("red", "blue", 'green'),Xnames = c('Bioclim','Space', 'Local'))
 
 #Assign to a Euler object the proportion of variation explained by each group of variables and their shared proportions
-venn_bryo_funct <- euler(c(A = 2.3,          
-                           B = 1.8,
+venn_bryo_funct <- euler(c(A = 2.5,          
+                           B = 1.9,
                            C = 7.2,
-                           "A&B" = 2,
-                           'A&C'= 1.3,
+                           "A&B" = 2.0,
+                           'A&C'= 1.2,
                            'B&C' = 0.8,
                            'A&B&C' = 0))
 
@@ -276,17 +278,16 @@ p_venn_bryo_funct <- plot(venn_bryo_funct, quantities = list(type = c("counts"),
 #######################################################
 ####Download SVG file for modification in Inkscape ####
 #######################################################
-svglite("figure3_varpart.svg")
+svglite("figure3_varpart.svg", width= 6.6, fix_text_size = FALSE, pointsize =8)
 gridExtra::grid.arrange(p_venn_vasc_tax, p_venn_bryo_tax,p_venn_vasc_funct, p_venn_bryo_funct, ncol=2)
 dev.off()
-
 
 ##################################
 #### RDA OF FUNCTIONAL TRAITS ####
 ##################################
 
 #Assign colnames for plotting
-colnames(env) <- c("Habitat", "Latitude",'Longitude', 'Annual temperature', 'Annual precipitations', 'Thickness', 'Surface water')
+colnames(env) <- c("Habitat", "Latitude",'Longitude', 'Annual temperature', 'Annual precipitations', 'Thickness', 'Surface water', 'Substratum')
 
 #Assign habitat as factor for plotting
 env$Habitat=as.factor(env$Habitat)
@@ -301,9 +302,12 @@ pointvec <- c(19,17)
 #### Plot of vascular species functional traits as a function of enviro variables
 #################################################################################
 summary(vas.funct.rda) #summary to extract % explained by each axis
+summary(bry.funct.rda) #summary to extract % explained by each axis
 
-svglite("figure4_RDA_vasc.svg")
-plot(vas.funct.rda, scaling=2, main="Triplot RDA - vascular traits", type="none", xlab=c("RDA1 (88.45%)"), ylab=c("RDA2 (4.74%)"), xlim=c(-1, 1), ylim=c(-1.4,1.4), cex =1)
+svglite("figure4_RDA.svg",width = 6.6, fix_text_size = FALSE, pointsize =8)
+
+par(mfrow = c(2,1))
+plot(vas.funct.rda, scaling=2, type="none", xlab=c("RDA1 (88.59%)"), ylab=c("RDA2 (5%)"), xlim=c(-1, 1), ylim=c(-1.4,1.4), cex =1)
 with(env, points(vas.funct.rda, display = "sites", col = colvec[Habitat],
                  scaling = scl, pch = pointvec[Habitat], bg = colvec[Habitat]))
 with(env, legend("topright", legend = levels(Habitat), bty = "n",
@@ -324,16 +328,8 @@ text(scores(vas.funct.rda, display="bp", choices=c(1), scaling=2)*2,
      scores(vas.funct.rda, display="bp", choices=c(2), scaling=2)*2,
      labels=rownames(scores(vas.funct.rda, display="bp", choices=c(2), scaling=2)),
      col="red", cex=1) 
-dev.off()
 
-
-#################################################################################
-#### Plot of bryophyte species functional traits as a function of enviro variables
-#################################################################################
-summary(bry.funct.rda) #summary to extract % explained by each axis
-
-svglite("figure4_RDA_bryo.svg")
-plot(bry.funct.rda, scaling=2, main="Triplot RDA - bryo traits", type="none", xlab=c("RDA1 (59.72%)"), ylab=c("RDA2 (27.20%)"), cex = 1,ylim=c(-1.3,1.4))
+plot(bry.funct.rda, scaling=2, type="none", xlab=c("RDA1 (58.38%)"), ylab=c("RDA2 (27.57%)"), cex = 1,ylim=c(-1.3,1.4))
 with(env, points(bry.funct.rda, display = "sites", col = colvec[Habitat],
                  scaling = 2, pch = pointvec[Habitat], bg = colvec[Habitat]))
 with(env, legend("topright", legend = levels(Habitat), bty = "n",
