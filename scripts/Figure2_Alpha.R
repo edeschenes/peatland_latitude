@@ -28,7 +28,7 @@ bryo <- data.frame(bryo[,-1], row.names = bryo$X)
 sites <- data.frame(sites, row.names = sites$ID_Quadrat)
 
 #Select only environmental variables used in the alpha diversity analyses (Habitat, latitude, longitude, mean annual temperature, mean annual precipitations, peat thickness, surface water, vascular richness, bryophyte richness)
-env <- dplyr::select(sites, SITES, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, Vas_Ric_Tot, Bry_Ric_Tot)
+env <- dplyr::select(sites, SITES, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, Substratum, Vas_Ric_Tot, Bry_Ric_Tot)
 
 #Create a new data frame for standardized environmental variables. Standardize environmental variables (scale and center). The unstandardized data will be used to obtain predicted values from the models to be used in the plots (Figure 1). 
 env.scale <- env
@@ -39,7 +39,7 @@ env.scale[,c(3:8)] <- scale(env.scale[,c(3:8)], center = TRUE, scale = TRUE)
 ####################################################################
 
 #Model of vascular richness as a function of standardized environmental variables, including a mixed effect for plots within sites
-result <- lme(log(Vas_Ric_Tot) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env.scale)
+result <- lme(log(Vas_Ric_Tot) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env.scale)
 
 #Coefficients and Pvalues in Table 1 are obtained from the following:
 summary(result)
@@ -54,7 +54,7 @@ qqnorm(result, ~ resid(., type = "p") | Habitat, abline = c(0, 1))
 qqnorm(result, ~ranef(.))
 
 #To calculate the p-value and coefficients of richness as a function of latitude for bog/fens separately (used in Figure 1), use the non standardized data. This is also used for plotting of predicted values. 
-result <- lme(log(Vas_Ric_Tot) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env)
+result <- lme(log(Vas_Ric_Tot) ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env)
 
 #Determine the p-value and coefficient of richness as a function of latitude for bogs and fens separately (values used in Figure 1)
 CL <- emtrends(result, pairwise ~ Habitat, var="Latitude") 
@@ -85,7 +85,7 @@ geom_line(aes(linetype=group, color=group)) +
 ################################################################
 
 #Model of moss richness as a function of standardized environmental variables, including a mixed effect for sites
-result <- lme(Bry_Ric_Tot ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
+result <- lme(Bry_Ric_Tot ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
 
 #Coefficients and Pvalues are obtained from the following:
 summary(result)
@@ -103,7 +103,7 @@ qqnorm(result, ~ resid(., type = "p") | Habitat, abline = c(0, 1))
 qqnorm(result, ~ranef(.))
 
 #To calculate the p-value and coefficients of richness as a function of latitude for bog/fens separately, use the non standardized data in the model of moss richness as a function of environmental variables. This is used for plotting of predicted values. 
-result <- lme(Bry_Ric_Tot ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env)
+result <- lme(Bry_Ric_Tot ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env)
 
 #Determine the p-value and coefficient of richness as a function of latitude for bogs and fens separately.
 CL <- emtrends(result, pairwise ~ Habitat, var="Latitude") 
@@ -124,6 +124,9 @@ mod_bry_ric <- ggplot(df, aes(x, predicted)) +
         axis.text=element_text(size=12), 
         legend.text=element_text(size=12))
 
+#Standalone linear regression of moss richness as a function of latitude
+result <- lme(Bry_Ric_Tot ~ Latitude, random = ~ 1|SITES, data = env.scale)
+summary(result)
 
 ##########################################################################
 ####Calculation of functional alpha diversity : Functional dispersion ####
@@ -208,7 +211,7 @@ fd_b <- dbFD(traits_bryo, bryo, corr = "cailliez", CWM.type = 'all', ord = 'poda
 sites$FDis_b <- fd_b$FDis
 
 #Select only environmental variables used in the alpha diversity analyses (Habitat, latitude, longitude, mean annual temperature, mean annual precipitations, peat thickness, surface water, vascular richness, bryophyte richness) as well as FDis
-env <- dplyr::select(sites, SITES,Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, FDis_v, FDis_b)
+env <- dplyr::select(sites, SITES,Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, Substratum, FDis_v, FDis_b)
 
 #Create a new data frame for standardized environmental variables. Standardize environmental variables (scale and center). The unstandardized data will be used to obtain predicted values from the models to be used in the plots (Figure 1). 
 env.scale <- env
@@ -220,7 +223,7 @@ env.scale[,c(3:8)] <- scale(env.scale[,c(3:8)], center = TRUE, scale = TRUE)
 ################################################################
 
 #Model of vascular FDis as a function of standardized environmental variables, including a mixed effect for sites
-result <- lme(FDis_v ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat,  random = ~ 1|SITES, data = env.scale) 
+result <- lme(FDis_v ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat,  random = ~ 1|SITES, data = env.scale) 
 
 #Coefficients and Pvalues are obtained from the following:
 summary(result)
@@ -235,7 +238,7 @@ qqnorm(result, ~ resid(., type = "p") | Habitat, abline = c(0, 1))
 qqnorm(result, ~ranef(.))
 
 #To calculate the p-value and coefficients of richness as a function of latitude for bog/fens separately, use the non standardized data in the model of moss richness as a function of environmental variables. This is used for plotting of predicted values.
-result <- lme(FDis_v ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat,  random = ~ 1|SITES, data = env)
+result <- lme(FDis_v ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat,  random = ~ 1|SITES, data = env)
 CL <- emtrends(result, pairwise ~ Habitat, var="Latitude") 
 test(CL)
 
@@ -259,7 +262,7 @@ mod_vas_fdis <- ggplot(df, aes(x, predicted)) +
 #### Moss FDis as a function of environmental variables ####
 ############################################################
 
-result <- lme(FDis_b ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
+result <- lme(FDis_b ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env.scale) 
 #Coefficients and Pvalues are obtained from the following:
 summary(result)
 
@@ -273,7 +276,7 @@ qqnorm(result, ~ resid(., type = "p") | Habitat, abline = c(0, 1))
 qqnorm(result, ~ranef(.))
 
 #To calculate the p-value and coefficients of richness as a function of latitude for bog/fens separately, use the non standardized data in the model of moss richness as a function of environmental variables. This is used for plotting of predicted values.
-result <- lme(FDis_b ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Latitude:Habitat, random = ~ 1|SITES, data = env) 
+result <- lme(FDis_b ~ Habitat + Latitude + Longitude + bioclim_1 + bioclim_12 + Thickness + Surface_water + Substratum + Latitude:Habitat, random = ~ 1|SITES, data = env) 
 CL <- emtrends(result, pairwise ~ Habitat, var="Latitude") 
 test(CL)
 
