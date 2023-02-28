@@ -299,7 +299,7 @@ mod_bry_fdis <- ggplot(df, aes(x, predicted)) +
 #######################################################
 ####Download SVG file for modification in Inkscape ####
 #######################################################
-svglite("figure2_alpha.svg")
+svglite("figure2_alpha.svg", width = 6.6, fix_text_size = FALSE, pointsize =8)
 grid.arrange(mod_vas_ric, mod_bry_ric, mod_vas_fdis, mod_bry_fdis,ncol=2)
 dev.off()
 
