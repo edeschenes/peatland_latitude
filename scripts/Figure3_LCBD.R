@@ -53,7 +53,7 @@ env <- dplyr::select(sites, SITES, Habitat, Latitude, Longitude, bioclim_1, bioc
 
 #Create a new data frame for standardized environmental variables. Standardize environmental variables (scale and center). The unstandardized data will be used to obtain predicted values from the models to be used in the plots (Figure 2).
 env.scale <- env
-env.scale[,c(3:8)] <- scale(env.scale[,c(3:8)], center = TRUE, scale = TRUE)
+env.scale[,c(3:9)] <- scale(env.scale[,c(3:9)], center = TRUE, scale = TRUE)
 
 
 ##################################################################################
@@ -259,7 +259,7 @@ env <- dplyr::select(sites, SITES, Habitat, Latitude, Longitude, bioclim_1, bioc
 
 #Create a new data frame for standardized environmental variables. Standardize environmental variables (scale and center). The unstandardized data will be used to obtain predicted values from the models to be used in the plots (Figure 2).
 env.scale <- env
-env.scale[,c(3:8)] <- scale(env.scale[,c(3:8)], center = TRUE, scale = TRUE)
+env.scale[,c(3:9)] <- scale(env.scale[,c(3:9)], center = TRUE, scale = TRUE)
 
 
 ##################################################################################
