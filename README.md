@@ -1,6 +1,3 @@
-![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7841844.svg)
-
-# Mosses and vascular plants biodiversity patterns along a latitudinal gradient in peatlands
 This repository includes the data and R scripts to reproduce analyses and figures found in the article Mosses and vascular plants show diverging taxonomic and functional biodiversity patterns along a latitudinal gradient in bogs and fens. 
 
 The analyses were carried out with R version 4.2.2  (a free software environment for statistical computing and graphics) and require the installation of a recent version of it.
