@@ -12,8 +12,6 @@ require(adespatial)
 require(vegan)
 require(FD)
 
-set_theme(base = theme_classic())  
-
 #Load data
 #Site x environmental variables matrix
 sites <- read.csv("Data_repository/sites_data.csv")
