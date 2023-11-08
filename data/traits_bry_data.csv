@@ -24,10 +24,10 @@ Sphagnum capillifolium,SPH.cap,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peris
 Sphagnum centrale,SPH.cen,Sphagnum,Turf,25,Shoot 3,Dioicous,Seta 0,No peristome,29,Spore 3,0,No peristome
 Sphagnum compactum,SPH.com,Sphagnum,Turf,10,Shoot 1,Monoicous,Seta 0,No peristome,32.5,Spore 3,0,No peristome
 Sphagnum contortum ,SPH.con,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,25.5,Spore 3,0,No peristome
-Sphagnum cuspidatum,SPH.cus,Sphagnum,Turf,8,Shoot 1,Dioicous,Seta 0,No peristome,34.5,Spore 3,0,No peristome
+Sphagnum cuspidatum,SPH.cus,Sphagnum,Turf,15,Shoot 1,Dioicous,Seta 0,No peristome,34.5,Spore 3,0,No peristome
 Sphagnum fallax,SPH.fal,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,28.5,Spore 3,0,No peristome
 Sphagnum fuscum,SPH.fus,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,25.5,Spore 3,0,No peristome
-Sphagnum girgensohnii,SPH.gir,Sphagnum,Turf,20,Shoot 3 ,Dioicous,Seta 0,No peristome,23.5,Spore 2,0,No peristome
+Sphagnum girgensohnii,SPH.gir,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,23.5,Spore 2,0,No peristome
 Sphagnum lindbergii,SPH.lin,Sphagnum,Turf,20,Shoot 3,Monoicous,Seta 0,No peristome,28,Spore 3,0,No peristome
 Sphagnum magellanicum,SPH.mag,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,28,Spore 3,0,No peristome
 Sphagnum majus,SPH.maj,Sphagnum,Turf,25,Shoot 3,Dioicous,Seta 0,No peristome,32.5,Spore 3,0,No peristome
@@ -42,7 +42,7 @@ Sphagnum subfulvum,SPH.subf,Sphagnum,Turf,15,Shoot 2,Monoicous,Seta 0,No peristo
 Sphagnum subsecundum,SPH.sub,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,28,Spore 3,0,No peristome
 Sphagnum tenellum ,SPH.ten,Sphagnum,Turf,10,Shoot 1,Dioicous,Seta 0,No peristome,37.5,Spore 3,0,No peristome
 Sphagnum teres,SPH.ter,Sphagnum,Turf,20,Shoot 3,Dioicous,Seta 0,No peristome,25,Spore 3,0,No peristome
-Sphagnum warnstorfii,SPH.war,Acrocarpous,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,22,Spore 2,0,No peristome
+Sphagnum warnstorfii,SPH.war,Sphagnum,Turf,15,Shoot 2,Dioicous,Seta 0,No peristome,22,Spore 2,0,No peristome
 Sphagnum wulfianum ,SPH.wul,Sphagnum,Turf,10,Shoot 1,Dioicous,Seta 0,No peristome,24,Spore 2,0,No peristome
 Straminergon stramineum,CAL.str,Pleurocarpous,Turf,25,Shoot 3,Dioicous,Seta 3,Perfect,14,Spore 1,0,Diplolepidous perfect
 Tomentypnum nitens,TOM.nit,Pleurocarpous,Turf,10,Shoot 1,Dioicous,Seta 4,Perfect,18,Spore 2,1,Diplolepidous perfect
