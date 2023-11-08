@@ -264,12 +264,12 @@ p_venn_vasc_funct<- plot(venn_vasc_funct, quantities = list(type = c("counts"), 
 plot(spe.part.bry, digits = 2, bg = c("red", "blue", 'green'),Xnames = c('Bioclim','Space', 'Local'))
 
 #Assign to a Euler object the proportion of variation explained by each group of variables and their shared proportions
-venn_bryo_funct <- euler(c(A = 2.5,          
+venn_bryo_funct <- euler(c(A = 2.4,          
                            B = 1.9,
-                           C = 7.2,
-                           "A&B" = 2.0,
+                           C = 7.1,
+                           "A&B" = 2.3,
                            'A&C'= 1.2,
-                           'B&C' = 0.8,
+                           'B&C' = 0,
                            'A&B&C' = 0))
 
 #Plot the Venn diagram with circle sizes proportional to the proportion of variation explained
@@ -278,7 +278,7 @@ p_venn_bryo_funct <- plot(venn_bryo_funct, quantities = list(type = c("counts"),
 #######################################################
 ####Download SVG file for modification in Inkscape ####
 #######################################################
-svglite("figure3_varpart.svg", width= 6.6, fix_text_size = FALSE, pointsize =8)
+svglite("figure4_varpart.svg", width= 6.6, fix_text_size = FALSE, pointsize =8)
 gridExtra::grid.arrange(p_venn_vasc_tax, p_venn_bryo_tax,p_venn_vasc_funct, p_venn_bryo_funct, ncol=2)
 dev.off()
 
@@ -304,10 +304,10 @@ pointvec <- c(19,17)
 summary(vas.funct.rda) #summary to extract % explained by each axis
 summary(bry.funct.rda) #summary to extract % explained by each axis
 
-svglite("figure4_RDA.svg",width = 6.6, fix_text_size = FALSE, pointsize =8)
+svglite("figure5_RDA.svg",width = 6.6, fix_text_size = FALSE, pointsize =8)
 
 par(mfrow = c(2,1))
-plot(vas.funct.rda, scaling=2, type="none", xlab=c("RDA1 (88.59%)"), ylab=c("RDA2 (5%)"), xlim=c(-1, 1), ylim=c(-1.4,1.4), cex =1)
+plot(vas.funct.rda, scaling=2, type="none", xlab=c("RDA1 (87.88%)"), ylab=c("RDA2 (5%)"), xlim=c(-1, 1), ylim=c(-1.4,1.4), cex =1)
 with(env, points(vas.funct.rda, display = "sites", col = colvec[Habitat],
                  scaling = scl, pch = pointvec[Habitat], bg = colvec[Habitat]))
 with(env, legend("topright", legend = levels(Habitat), bty = "n",
@@ -329,7 +329,7 @@ text(scores(vas.funct.rda, display="bp", choices=c(1), scaling=2)*2,
      labels=rownames(scores(vas.funct.rda, display="bp", choices=c(2), scaling=2)),
      col="red", cex=1) 
 
-plot(bry.funct.rda, scaling=2, type="none", xlab=c("RDA1 (58.38%)"), ylab=c("RDA2 (27.57%)"), cex = 1,ylim=c(-1.3,1.4))
+plot(bry.funct.rda, scaling=2, type="none", xlab=c("RDA1 (56.93%)"), ylab=c("RDA2 (30.25%)"), cex = 1,ylim=c(-1.3,1.4))
 with(env, points(bry.funct.rda, display = "sites", col = colvec[Habitat],
                  scaling = 2, pch = pointvec[Habitat], bg = colvec[Habitat]))
 with(env, legend("topright", legend = levels(Habitat), bty = "n",
