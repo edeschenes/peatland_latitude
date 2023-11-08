@@ -10,8 +10,6 @@ require(gridExtra)
 library(reshape2)
 require(ggpmisc)
 
-set_theme(base = theme_classic()) 
-
 #Load data
 #Site x environmental variables matrix
 sites <- read.csv("Data_repository/sites_data.csv")
@@ -84,7 +82,7 @@ sites$Habitat=as.factor(sites$Habitat)
 
 #Plot of PCA of bioclimatic variables
 svglite("figure_S1_pca_bioclim.svg", width = 6.6, fix_text_size = FALSE, pointsize =8)
-plot(env.pca, scaling=2, type="none", xlab=c("PCA1 (47.73%)"), ylab=c("PCA2 (31.03%)"),xlim=c(-2,3), ylim=c(-1.5, 2))
+plot(env.pca, scaling=2, type="none", xlab=c("PCA1 (48.00%)"), ylab=c("PCA2 (30.81%)"),xlim=c(-2,3), ylim=c(-1.5, 2))
 points(scores(env.pca, display="sites", choices=c(1,2), scaling=2),pch=21, col="black", bg="black", cex=0.7)
 with(sites, points(env.pca, display = "sites", col = colvec[Habitat],
                  scaling = scl, pch = pointvec[Habitat], bg = colvec[Habitat]))
@@ -102,7 +100,7 @@ dev.off()
 
 
 ####################################
-#### Figure S2 - PCOA BOG / FEN ####
+#### Figure S3 - PCOA BOG / FEN ####
 ####################################
 #Betadisper: multivariate dispersion analysis
 #permutest.betadisper: comparison of group mean dispersions
@@ -128,21 +126,21 @@ adonis2(bry.bray ~ Habitat, data=env, permutations=9999)
 adonis2(vas.bray ~ Habitat, data=env, permutations=9999)
 
 #Download PCoA biplots 
-svglite("figureS2_pcoa.svg",  width = 6.6, fix_text_size = FALSE, pointsize =8)
+svglite("figureS3_pcoa.svg",  width = 6.6, fix_text_size = FALSE, pointsize =8)
 par(mfrow=c(1,2))
 plot(b.disp.vas, ellipse = TRUE, hull = FALSE, col = c('lightcoral','lightblue3')) 
 plot(b.disp.bry, ellipse = TRUE, hull = FALSE,col = c('lightcoral','lightblue3')) 
 dev.off()
 
 #Distance to centroid figures. Added manually in inkscape to the PCoA plots
-svglite("figureS2_distcent.svg")
+svglite("figureS3_distcent.svg")
 par(mfrow=c(1,2))
 boxplot(b.disp.vas, ylab = "Distance to centroid", main = 'Vascular',col = c("lightcoral", "lightblue3","lightcoral", "lightblue3","lightcoral", "lightblue3"), cex.axis =1.5 ,cex.lab=1.5)
 boxplot(b.disp.bry, ylab = "Distance to centroid", main = 'Bryophyte',col =  c("lightcoral", "lightblue3","lightcoral", "lightblue3","lightcoral", "lightblue3"), cex.axis = 1.5,cex.lab=1.5)
 dev.off()
 
 ################################################
-#### Figure S3 - PCA of species composition ####
+#### Figure S4 - PCA of species composition ####
 ################################################
 #Run PCA of species
 vas.hel <- (decostand(vascu, "hellinger"))
@@ -160,7 +158,7 @@ colvec <- c('lightcoral','lightblue3')
 pointvec <- c(19,17)
 sites$Habitat=as.factor(sites$Habitat)
 
-svglite("figure_S3_pca_species.svg",  width = 6.6, fix_text_size = FALSE, pointsize =8)
+svglite("figure_S4_pca_species.svg",  width = 6.6, fix_text_size = FALSE, pointsize =8)
 par(mfrow=c(2,1))
 plot(vas.pca, scaling=2,, type="none", xlab=c("PCA1 (22.25%)"), ylab=c("PCA2 (11.51%)"))
 with(env, points(vas.pca, display = "sites", col = colvec[Habitat],
@@ -192,7 +190,7 @@ text(scores(bry.pca, display="species", choices=c(1), scaling=2),
 dev.off()
 
 #################################################################
-#### Figure S4 - Correlation plot of environmental variables ####
+#### Figure S5 - Correlation plot of environmental variables ####
 #################################################################
 
 #Select environmental variables in bogs
@@ -216,13 +214,13 @@ cor_bog <- ggcorr(env_bog, method = c("pairwise", "pearson"), label = TRUE, hjus
 cor_fen <- ggcorr(env_fen, method = c("pairwise", "pearson"), label = TRUE, hjust = 0.75)
 
 ####Download SVG file for modification in Inkscape ####
-svglite("figure_S2_corplot.svg", width = 6.6, fix_text_size = FALSE, pointsize =8)
+svglite("figure_S5_corplot.svg", width = 6.6, fix_text_size = FALSE, pointsize =8)
 gridExtra::grid.arrange(cor_bog, cor_fen, ncol=2)
 dev.off()
 
 
 ##############################################################
-#### Figure S5 - Environmental variables in bogs and fens ####
+#### Figure S6 - Environmental variables in bogs and fens ####
 ##############################################################
 #Select environmental variables
 env <- dplyr::select(sites, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, Substratum)
@@ -321,12 +319,12 @@ fm1 <- aov(Substratum~Habitat, data=env)#run anova to determine difference betwe
 anova(fm1) #P-values were used to determine significatn differences between bogs and fens, and letters were added in Inkscape.
 
 ####Download SVG file for modification in Inkscape ####
-svglite("figure_S3_env.svg", width = 6, height = 12)
+svglite("figure_S6_env.svg", width = 6, height = 12)
 grid.arrange(p1,p3,p5,p2,p4,p6, p7, ncol=2)
 dev.off()
 
 ############################################
-####Figure S6. PCA of functional traits ####
+####Figure S7. PCA of functional traits ####
 ############################################
 #PCA is conducted on the site x trait class frequencies matrix.
 #Step 1. Calculate trait class frequencies with function functcomp
@@ -426,9 +424,9 @@ bry.funct.pca <- rda(traits_bryo_hel) #perform PCA for moss traits
 summary(bry.funct.pca)
 
 #Plot
-svglite("figure_S6_pca_traits.svg", width= 6.6, fix_text_size = FALSE, pointsize =8.5)
+svglite("figure_S7_pca_traits.svg", width= 6.6, fix_text_size = FALSE, pointsize =8.5)
 par(mfrow = c(2,1))
-plot(vas.funct.pca, scaling=2, type="none", xlab=c("PCA1 (56.02%)"), ylab=c("PCA2 (12.92%)"), xlim=c(-1.3, 1.3), ylim=c(-1,1), cex =1)
+plot(vas.funct.pca, scaling=2, type="none", xlab=c("PCA1 (56.12%)"), ylab=c("PCA2 (12.94%)"), xlim=c(-1.3, 1.3), ylim=c(-1,1), cex =1)
 with(env, points(vas.funct.pca, display = "sites", col = colvec[Habitat],
                  scaling = scl, pch = pointvec[Habitat], bg = colvec[Habitat]))
 with(env, legend("topright", legend = levels(Habitat), bty = "n",
@@ -441,7 +439,7 @@ text(scores(vas.funct.pca, display="species", choices=c(1), scaling=2)*1.1,
      scores(vas.funct.pca, display="species", choices=c(2), scaling=2)*1.1,
      labels=rownames(scores(vas.funct.pca, display="species", scaling=2)),
      col="black", cex=1)  
-plot(bry.funct.pca, scaling=2,type="none", xlab=c("PCA1 (41.26%)"), ylab=c("PCA2 (19.92%)"), xlim=c(-1.3, 1.3), ylim=c(-1.5,1.5), cex = 1)
+plot(bry.funct.pca, scaling=2,type="none", xlab=c("PCA1 (41.68%)"), ylab=c("PCA2 (20.87%)"), xlim=c(-1.3, 1.3), ylim=c(-1.5,1.5), cex = 1)
 with(env, points(bry.funct.pca, display = "sites", col = colvec[Habitat],
                  scaling = scl, pch = pointvec[Habitat], bg = colvec[Habitat]))
 with(env, legend("topright", legend = levels(Habitat), bty = "n",
@@ -457,7 +455,7 @@ text(scores(bry.funct.pca, display="species", choices=c(1), scaling=2)*1.1,
 dev.off()
 
 ############################################################################
-####Figure S5. Functional trait frequencies along latitudinal gradients ####
+####Figure S8-9. Functional trait frequencies along latitudinal gradients ####
 ############################################################################
 env <- dplyr::select(sites, Habitat, Latitude, Longitude, bioclim_1, bioclim_12, Thickness, Surface_water, Substratum) #select environmental data
 
@@ -517,7 +515,7 @@ g.4 <- ggplot(env.long, aes(x=Latitude, y=CWM_SLA, color=variable)) +
 g.4
 
 ####Download SVG file for modification in Inkscape ####
-svglite("figure_S7_vasc_traits.svg", , width= 6.6, fix_text_size = FALSE, pointsize =8.5)
+svglite("figure_S8_vasc_traits.svg", , width= 6.6, fix_text_size = FALSE, pointsize =8.5)
 grid.arrange(g.1, g.2, g.3, g.4,ncol=2)
 dev.off()
 
@@ -637,6 +635,6 @@ g.8
 
 
 ####Download SVG file for modification in Inkscape ####
-svglite("figure_S8_bry_traits.svg", width= 6.6,height = 9, fix_text_size = FALSE, pointsize =8.5)
+svglite("figure_S9_bry_traits.svg", width= 6.6,height = 9, fix_text_size = FALSE, pointsize =8.5)
 grid.arrange(g.1, g.2, g.3, g.4,g.5,g.6,g.7,g.8,ncol=2)
 dev.off()
