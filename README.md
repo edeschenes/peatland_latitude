@@ -1,4 +1,4 @@
-This repository includes the data and R scripts to reproduce analyses and figures found in the article Mosses and vascular plants show diverging taxonomic and functional biodiversity patterns along a latitudinal gradient in bogs and fens. 
+This repository includes the data and R scripts to reproduce analyses and figures found in the article Mosses and vascular plants show diverging diversity patterns along a latitudinal gradient in boreal bogs and fens. 
 
 The analyses were carried out with R version 4.2.2  (a free software environment for statistical computing and graphics) and require the installation of a recent version of it.
 
